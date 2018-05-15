@@ -31,20 +31,20 @@ xenial-$(BOARD_TARGET): xenial-minimal-$(BOARD_TARGET) \
 	xenial-mate-$(BOARD_TARGET) \
 	xenial-i3-$(BOARD_TARGET)
 
-.PHONY: bionic-minimal-$(BOARD_TARGET)
-bionic-minimal-$(BOARD_TARGET): bionic-minimal-$(BOARD_TARGET)-$(IMAGE_SUFFIX)-armhf.img.xz \
-	bionic-minimal-$(BOARD_TARGET)-$(IMAGE_SUFFIX)-arm64.img.xz
+#.PHONY: bionic-minimal-$(BOARD_TARGET)
+#bionic-minimal-$(BOARD_TARGET): bionic-minimal-$(BOARD_TARGET)-$(IMAGE_SUFFIX)-armhf.img.xz \
+#	bionic-minimal-$(BOARD_TARGET)-$(IMAGE_SUFFIX)-arm64.img.xz
 
-.PHONY: bionic-mate-$(BOARD_TARGET)
-bionic-mate-$(BOARD_TARGET): bionic-mate-$(BOARD_TARGET)-$(IMAGE_SUFFIX)-arm64.img.xz
+#.PHONY: bionic-mate-$(BOARD_TARGET)
+#bionic-mate-$(BOARD_TARGET): bionic-mate-$(BOARD_TARGET)-$(IMAGE_SUFFIX)-arm64.img.xz
 
-.PHONY: bionic-lxde-$(BOARD_TARGET)
-bionic-lxde-$(BOARD_TARGET): bionic-lxde-$(BOARD_TARGET)-$(IMAGE_SUFFIX)-arm64.img.xz
+#.PHONY: bionic-lxde-$(BOARD_TARGET)
+#bionic-lxde-$(BOARD_TARGET): bionic-lxde-$(BOARD_TARGET)-$(IMAGE_SUFFIX)-arm64.img.xz
 
-.PHONY: bionic-$(BOARD_TARGET)		# build all bionic variants
-bionic-$(BOARD_TARGET): bionic-minimal-$(BOARD_TARGET) \
-	bionic-mate-$(BOARD_TARGET) \
-	bionic-lxde-$(BOARD_TARGET)
+#.PHONY: bionic-$(BOARD_TARGET)		# build all bionic variants
+#bionic-$(BOARD_TARGET): bionic-minimal-$(BOARD_TARGET) \
+#	bionic-mate-$(BOARD_TARGET) \
+#	bionic-lxde-$(BOARD_TARGET)
 
 .PHONY: stretch-$(BOARD_TARGET)		# build all stretch variants
 stretch-$(BOARD_TARGET): stretch-minimal-$(BOARD_TARGET) \
@@ -56,7 +56,7 @@ jessie-$(BOARD_TARGET): jessie-minimal-$(BOARD_TARGET) \
 
 .PHONY: linux-$(BOARD_TARGET)		# build all linux variants
 linux-$(BOARD_TARGET): \
-	bionic-$(BOARD_TARGET) \
+#	bionic-$(BOARD_TARGET) \
 	xenial-$(BOARD_TARGET) \
 	stretch-$(BOARD_TARGET) \
 	jessie-$(BOARD_TARGET) \
@@ -66,7 +66,7 @@ linux-$(BOARD_TARGET): \
 
 .PHONY: linux-minimal-$(BOARD_TARGET)		# build all linux variants
 linux-minimal-$(BOARD_TARGET): \
-	bionic-minimal-$(BOARD_TARGET) \
+#	bionic-minimal-$(BOARD_TARGET) \
 	xenial-minimal-$(BOARD_TARGET) \
 	xenial-containers-$(BOARD_TARGET) \
 	stretch-minimal-$(BOARD_TARGET) \
