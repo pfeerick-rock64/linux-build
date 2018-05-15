@@ -17,7 +17,7 @@ arm-trusted-firmware kernel kernel-mainline u-boot:
 
 .PHONY: sync		# download all subtrees
 sync:
-	repo init -u https://github.com/ayufan-rock64/linux-manifests -b default --depth=1 --no-clone-bundle
+	repo init -u https://github.com/pfeerick-rock64/linux-manifests -b default --depth=1 --no-clone-bundle
 	repo sync -j 20 -c --force-sync
 
 .PHONY: pull-trees		# merge all subtree into current tree

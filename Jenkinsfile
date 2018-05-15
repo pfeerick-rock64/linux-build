@@ -42,7 +42,7 @@ node('docker && linux-build') {
                   export HOME=$WORKSPACE
                   export USER=jenkins
 
-                  repo init -u https://github.com/ayufan-rock64/linux-manifests -b default --depth=1 --no-clone-bundle
+                  repo init -u https://github.com/pfeerick-rock64/linux-manifests -b default --depth=1 --no-clone-bundle
                   repo sync -j 20 -c --force-sync
                 '''
               }
@@ -106,7 +106,7 @@ node('docker && linux-build') {
                     # use -ve, otherwise we could leak GITHUB_TOKEN...
                     set -ve
                     echo "machine github.com login user password $GITHUB_TOKEN" > ~/.netrc
-                    repo forall -g tagged -e -c git push ayufan "$GITHUB_USER/$GITHUB_REPO/$VERSION" -f
+                    repo forall -g tagged -e -c git push $GITHUB_USER "$GITHUB_USER/$GITHUB_REPO/$VERSION" -f
                     rm ~/.netrc
                   '''
                 }
