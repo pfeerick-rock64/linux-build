@@ -42,4 +42,4 @@ shell:
 		-h rock64-build-env \
 		-v $(CURDIR):$(CURDIR) \
 		-w $(CURDIR) \
-		ayufan/rock64-dockerfiles:x86_64
+                pfeerick/rock64-dockerfiles:x86_64
