@@ -56,7 +56,6 @@ jessie-$(BOARD_TARGET): jessie-minimal-$(BOARD_TARGET) \
 
 .PHONY: linux-$(BOARD_TARGET)		# build all linux variants
 linux-$(BOARD_TARGET): \
-#	bionic-$(BOARD_TARGET) \
 	xenial-$(BOARD_TARGET) \
 	stretch-$(BOARD_TARGET) \
 	jessie-$(BOARD_TARGET) \
@@ -66,7 +65,6 @@ linux-$(BOARD_TARGET): \
 
 .PHONY: linux-minimal-$(BOARD_TARGET)		# build all linux variants
 linux-minimal-$(BOARD_TARGET): \
-#	bionic-minimal-$(BOARD_TARGET) \
 	xenial-minimal-$(BOARD_TARGET) \
 	xenial-containers-$(BOARD_TARGET) \
 	stretch-minimal-$(BOARD_TARGET) \

@@ -4,7 +4,7 @@ export BOOT_TOOLS_BRANCH ?= master
 export KERNEL_DIR ?= kernel
 export UBOOT_DIR ?= u-boot
 
-BUILD_SYSTEMS := bionic xenial jessie stretch
+BUILD_SYSTEMS := xenial jessie stretch
 BUILD_VARIANTS := minimal mate lxde i3 openmediavault containers
 BUILD_ARCHS := armhf arm64
 BUILD_MODELS := rock64 rockpro64
